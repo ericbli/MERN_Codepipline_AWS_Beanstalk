@@ -2,7 +2,7 @@ const config = require('config');
 const jwt = require('jsonwebtoken');
 
 function auth(req, res, next) {
-  const token = req.header('x-auth-token');
+  const token = req.header('x-auth-token');   //get token from header
 
   // Check for token
   if (!token)
@@ -19,4 +19,4 @@ function auth(req, res, next) {
   }
 }
 
-module.exports = auth;
+module.exports = auth;  //export middleware
